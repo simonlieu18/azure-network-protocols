@@ -6,9 +6,6 @@
 In this tutorial, we observe various network traffic to and from Azure Virtual Machines with Wireshark as well as experiment with Network Security Groups. <br />
 
 
-<h2>Video Demonstration</h2>
-
-- ### [YouTube: Azure Virtual Machines, Wireshark, and Network Security Groups](https://www.youtube.com)
 
 <h2>Environments and Technologies Used</h2>
 
@@ -25,33 +22,36 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <h2>High-Level Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Create Virtual Machines
+- Wireshark to Observe Traffic
+- Configure Network Security Groups
 
 <h2>Actions and Observations</h2>
 
+![image](https://github.com/user-attachments/assets/c2b5750d-e106-4731-87f3-e7220532c9f6)
+
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Launch two virtual machines, a Windows 10 and a Linux Ubuntu Server. Make sure both are under the same resource group and virtual network. 
 </p>
 <br />
 
+![image](https://github.com/user-attachments/assets/1ec8d4d6-b1de-4e76-a55f-0dc01aa5b738)
+
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Install Wireshark and filter by ICMP to see traffic when pinging different IPs.
 </p>
 <br />
 
+![image](https://github.com/user-attachments/assets/5bddc052-5294-4045-be45-97b178d63faa)
+
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Non-stop ping the Linux Ubuntu VM by using the command "ping -t (IP Address or Domain)". In the network settings for the Linux Ubuntu VM go under Network Security Group to disable ICMP traffic.
 </p>
+<br />
+
+![image](https://github.com/user-attachments/assets/e4161b96-cad9-454e-a73a-cfd6888d8d7f)
+
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Back on the Windows 10 VM you'll notice on wireshark that a ping is sent but nothing is being replied back. Showing that the security group added, succeeded in blocking the ICMP traffic.
 </p>
 <br />
