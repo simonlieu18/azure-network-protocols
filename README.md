@@ -52,6 +52,6 @@ Non-stop ping the Linux Ubuntu VM by using the command "ping -t (IP Address or D
 ![image](https://github.com/user-attachments/assets/e4161b96-cad9-454e-a73a-cfd6888d8d7f)
 
 <p>
-Back on the Windows 10 VM you'll notice on wireshark that a ping is sent but nothing is being replied back. Showing that the security group added, succeeded in blocking the ICMP traffic.
+Back on the Windows 10 VM you'll notice on wireshark that a ping is sent but nothing is being replied back. Indicating that the security group added, succeeded in blocking the ICMP traffic.
 </p>
 <br />
