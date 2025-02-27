@@ -63,7 +63,7 @@ SSH traffic can also be observed by filtering Wireshark for SSH traffic only. Yo
 </p>
 <br />
 
-![image](https://github.com/user-attachments/assets/2a76ab0a-f218-4580-b90e-92639a3451f3)
+![image](https://github.com/user-attachments/assets/823183ed-98b6-4dc1-a289-8d9730777f7b)
 
 <p>
 Another protocol you can track is DNS traffic by filtering Wireshark by DNS traffic only. Enter a command like "nslookup google.com" to observe DNS traffic in Wireshark.
