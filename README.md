@@ -12,7 +12,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Various Command-Line Tools
-- Various Network Protocols (SSH, RDH, DNS, HTTP/S, ICMP)
+- Various Network Protocols (SSH, DNS, ICMP)
 - Wireshark (Protocol Analyzer)
 
 <h2>Operating Systems Used </h2>
@@ -53,5 +53,19 @@ Non-stop ping the Linux Ubuntu VM by using the command "ping -t (IP Address or D
 
 <p>
 Back on the Windows 10 VM you'll notice on wireshark that a ping is sent but nothing is being replied back. Indicating that the security group added, succeeded in blocking the ICMP traffic.
+</p>
+<br />
+
+![image](https://github.com/user-attachments/assets/2a76ab0a-f218-4580-b90e-92639a3451f3)
+
+<p>
+SSH traffic can also be observed by filtering Wireshark for SSH traffic only. You can SSH into the Lunix server by using the command "ssh usernam@private IP". From there you can enter commands (pwd, exit) to track data being transferred in Wireshark.
+</p>
+<br />
+
+![image](https://github.com/user-attachments/assets/2a76ab0a-f218-4580-b90e-92639a3451f3)
+
+<p>
+Another protocol you can track is DNS traffic by filtering Wireshark by DNS traffic only. Enter a command like "nslookup google.com" to observe DNS traffic in Wireshark.
 </p>
 <br />
